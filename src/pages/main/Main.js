@@ -39,7 +39,7 @@ export default class MenuExampleBasic extends Component {
             <List>
                 <List.Item>
                     <List.Icon name='phone'/>
-                    <List.Content>+491626101268</List.Content>
+                    <List.Content>+4917643227537</List.Content>
                 </List.Item>
                 <List.Item>
                     <List.Icon name='users'/>
@@ -47,7 +47,7 @@ export default class MenuExampleBasic extends Component {
                 </List.Item>
                 <List.Item>
                     <List.Icon name='marker'/>
-                    <List.Content>Landfried Str. N:7 81547 Münich, Germany</List.Content>
+                    <List.Content>Münich, Germany</List.Content>
                 </List.Item>
                 <List.Item>
                     <List.Icon name='mail'/>
