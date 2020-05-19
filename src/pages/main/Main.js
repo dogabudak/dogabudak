@@ -29,7 +29,7 @@ export default class MainPage extends Component {
         }
     }
     renderSkillsSection = () => {
-        return <div style={{ padding: '20px' }}>
+        return <div style={{ padding: '20px'}}>
             <b> Languages: </b> English (Fluent), IELTS 7.5 – 2016 German(B 2.1)<br />
             <b> Programming Languages:</b> JAVA, Node.js, MatLab, Julia, Haskell, Rust, Nativescript, Typescript, React, ReactNative, Raml<br />
             <b> Applications and Tools:</b>  MongoDb, Cassandra, ElasticSearch, Memcached, Prometheus<br />
@@ -39,7 +39,7 @@ export default class MainPage extends Component {
         </div>
     }
     renderContactsSection = () => {
-        return <div style={{ padding: '20px' }}>
+        return <div style={{ padding: '20px'}}>
             <a href="https://www.linkedin.com/in/doga-budak-40635b95/">Linkedn</a> <br />
             <a href="https://www.xing.com/profile/DOGA_BUDAK2/cv">Xing</a><br />
             <a href="https://www.instagram.com/budakdoga/">Instagram</a><br />
@@ -49,7 +49,7 @@ export default class MainPage extends Component {
         </div>
     }
     renderGeneralSection = () => {
-        return <div style={{ padding: '20px' }}>
+        return <div style={{ padding: '20px', display: 'inline-flex' }}>
             <List>
                 <List.Item>
                     <List.Icon name='phone'/>
@@ -72,12 +72,8 @@ export default class MainPage extends Component {
             </List>
         </div>
     }
-    /*
-
-
-     */
     renderEducationSection = () => {
-        return <div style={{ padding: '20px' }}>
+        return <div style={{ padding: '20px', display: 'inline-flex' }}>
             <List bulleted>
                 <List.Item><b>M.Sc. Informatik</b><a>(www.in.tu-clausthal.de)</a> Mar. 2017-Jan.2018 Clausthal Technical
                     University, Niedersachsen Germany</List.Item>
@@ -89,7 +85,7 @@ export default class MainPage extends Component {
         </div>
     }
     renderExperienceSection = () => {
-        return <div style={{ padding: '20px' }}>
+        return <div style={{ padding: '20px', display: 'inline-flex' }}>
             <List bulleted>
                 <List.Item><b>Check24 </b> <a>(https://www.check24.de/)</a> Münich, GermanyJan. July 2018 - Currently
                     <List.List>
@@ -127,7 +123,7 @@ export default class MainPage extends Component {
         </div>
     }
     renderInterestsSection = () => {
-        return <div style={{ padding: '20px' }}>
+        return <div style={{ padding: '20px'}}>
             A Hobby project called “piarka” is currently developed and designed. Piarka is a mobile
             application.Currently under development. Followings has been used in the project
             <List bulleted>
