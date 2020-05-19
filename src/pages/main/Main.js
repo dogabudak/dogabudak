@@ -2,8 +2,9 @@ import React, {Component} from 'react'
 import {Header, Image, List, Menu, Segment} from 'semantic-ui-react'
 import './Main.css';
 import ProfilePicture from '../../images/ProfilePicture.jpg';
+import SideBox from '../../components/SideBox';
 
-export default class MenuExampleBasic extends Component {
+export default class MainPage extends Component {
     state = {activeItem: 'General'}
     handleItemClick = (e, {name}) => this.setState({activeItem: name})
     renderSection = () => {
@@ -23,6 +24,9 @@ export default class MenuExampleBasic extends Component {
         if (sectionName === 'Skills') {
             return this.renderSkillsSection();
         }
+        if (sectionName === 'Contact') {
+            return this.renderContactsSection();
+        }
     }
     renderSkillsSection = () => {
         return <div style={{ padding: '20px' }}>
@@ -32,6 +36,16 @@ export default class MenuExampleBasic extends Component {
             <b> Libraries:</b> Koa.js, Vue.js, Protocol Buffers, Nano Message, React.js, Amazon Kinesis<br />
             <b> Databases and Caches:</b> Redis, memcached <br />
             <b> Deployment:</b> CoreOS, Docker, AWS, bamboo <br />
+        </div>
+    }
+    renderContactsSection = () => {
+        return <div style={{ padding: '20px' }}>
+            <a href="https://www.linkedin.com/in/doga-budak-40635b95/">Linkedn</a> <br />
+            <a href="https://www.xing.com/profile/DOGA_BUDAK2/cv">Xing</a><br />
+            <a href="https://www.instagram.com/budakdoga/">Instagram</a><br />
+            <a href="https://www.facebook.com/doga.budak.3">Facebook</a><br />
+            <a href="https://twitter.com/dogabudak">Twitter</a><br />
+            <a href="https://github.com/dogabudak">GitHub</a><br />
         </div>
     }
     renderGeneralSection = () => {
@@ -161,8 +175,14 @@ export default class MenuExampleBasic extends Component {
                         active={activeItem === 'Skills'}
                         onClick={this.handleItemClick}
                     />
+                    <Menu.Item
+                        name='Contact'
+                        active={activeItem === 'Contact'}
+                        onClick={this.handleItemClick}
+                    />
                 </Menu>
                 {this.renderSection()}
+                <SideBox/>
             </div>
         )
     }
