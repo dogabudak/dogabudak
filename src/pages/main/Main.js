@@ -74,14 +74,14 @@ export default class MainPage extends Component {
     }
     renderEducationSection = () => {
         return <div style={{ padding: '20px', display: 'inline-flex' }}>
-            <List bulleted>
-                <List.Item><b>M.Sc. Informatik</b><a>(www.in.tu-clausthal.de)</a> Mar. 2017-Jan.2018 Clausthal Technical
-                    University, Niedersachsen Germany</List.Item>
+            <List bulleted><List.Item><b>M.Sc. Informatik</b><a>(www.in.tu-clausthal.de)</a> Mar. 2017-Jan.2018 Clausthal Technical
+                University, Niedersachsen Germany</List.Item>
                 <List.Item><b>BSc. Electronics and Comm. Engineering </b><a>(www.yildiz.edu.tr/en/)</a> Sep.
                     2009-Jun.2014 Yıldız Technical University, Istanbul Turkey</List.Item>
                 <List.Item><b>Electronic Engineering (ERASMUS Exchange Program)</b><a>(fontys.edu/)</a> Sep.
                     2011-Jun.2012 Fontys University of Applied Sciences, Eindhoven Netherlands</List.Item>
-            </List>
+
+                    </List>
         </div>
     }
     renderExperienceSection = () => {
