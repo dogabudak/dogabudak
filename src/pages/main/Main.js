@@ -85,6 +85,7 @@ export default class MainPage extends Component {
         </div>
     }
     renderExperienceSection = () => {
+        //TODO add your data from your current work 
         return <div style={{ padding: '20px', display: 'inline-flex' }}>
             <List bulleted>
                 <List.Item><b>Check24 </b> <a>(https://www.check24.de/)</a> Münich, GermanyJan. July 2018 - Currently
