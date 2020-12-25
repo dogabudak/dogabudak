@@ -18,7 +18,7 @@ export default class SideBox extends Component {
                         <p style={{yIndex: 5}} className="box__item">Yeşil Doğa</p>
                         <p style={{yIndex: 6}} className="box__item">Procedure Dungeons</p>
                         <p style={{yIndex: 7}} className="box__item">An Unusual Refugee </p>
-                        <p style={{yIndex: 8}} className="box__item">piarkasoftware </p>
+                        <p style={{yIndex: 8}} className="box__item">piarkasoftware.com</p>
                     </div>
                 </div>
             </div>
