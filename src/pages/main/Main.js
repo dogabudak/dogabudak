@@ -1,8 +1,13 @@
 import React, {Component} from 'react'
-import {Header, Image, List, Menu, Segment} from 'semantic-ui-react'
+import {Button, Grid, Header, Image, List, Menu} from 'semantic-ui-react'
 import './Main.css';
 import ProfilePicture from '../../images/ProfilePicture.jpg';
-import SideBox from '../../components/SideBox';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
 export default class MainPage extends Component {
     state = {activeItem: 'General'}
@@ -85,7 +90,7 @@ export default class MainPage extends Component {
         </div>
     }
     renderExperienceSection = () => {
-        //TODO add your data from your current work 
+        //TODO add your data from your current work
         return <div style={{ padding: '20px', display: 'inline-flex' }}>
             <List bulleted>
                 <List.Item><b>Check24 </b> <a>(https://www.check24.de/)</a> Münich, GermanyJan. July 2018 - Currently
@@ -141,11 +146,13 @@ export default class MainPage extends Component {
     render() {
         const {activeItem} = this.state;
         return (
-            <div>
-                <Segment attached='bottom'>
-                    <Image src={ProfilePicture} size='medium' circular/>
-                    <Header as='h3'>Doğa Budak</Header>
-                </Segment>
+            <div className='Page'>
+                <Grid attached='bottom'>
+                      <Image src={ProfilePicture} size='medium' circular/>
+                      <Header as='h3'>Doğa Budak</Header>
+                </Grid>
+                <Grid>
+                    <Grid width={10}>
                 <Menu attached='top' tabular>
                     <Menu.Item
                         name='General'
@@ -179,7 +186,15 @@ export default class MainPage extends Component {
                     />
                 </Menu>
                 {this.renderSection()}
-                <SideBox/>
+                </Grid>
+                <Grid width={2}>
+                    <div className='githubExplore'>
+                        <Button>
+                            <Link to="/blog">Go To Blog</Link>
+                        </Button>
+                    </div>
+                </Grid>
+                </Grid>
             </div>
         )
     }

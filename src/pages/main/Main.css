@@ -27,6 +27,18 @@
 .App-link {
   color: #61dafb;
 }
+.githubExplore {
+  top: 50%;
+  right: 5vh;
+  color: #007b9a;
+  font-size: 20px;
+  margin-left: 10vw;
+  margin-bottom: 10vh;
+  position: absolute;
+}
+.Page {
+  margin: 1.5vh;
+}
 
 @keyframes App-logo-spin {
   from {
