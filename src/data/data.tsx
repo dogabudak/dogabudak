@@ -38,7 +38,8 @@ import {
  */
 export const homePageMeta: HomepageMeta = {
   title: 'Doğa Budak',
-  description: '',
+  description:
+    'Munich-based Full Stack Engineer with a passion for creative coding, gaming, and building useful things for curious minds.',
 };
 
 /**
@@ -54,37 +55,39 @@ export const SectionId = {
   Stats: 'stats',
 } as const;
 
-export type SectionId = typeof SectionId[keyof typeof SectionId];
+export type SectionId = (typeof SectionId)[keyof typeof SectionId];
 
 /**
  * Hero section
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Doğa Budak.`,
+  name: `Hi, I'm Doğa Budak.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Münich based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">ParcelLab</strong> helping build a modern, post-purchase and customer
-        experience tool.
+        I'm a Munich-based <strong className="text-stone-100">Full Stack Software Engineer</strong> with over a decade
+        of experience across startups and scaleups. Currently, I work at{' '}
+        <strong className="text-stone-100">ParcelLab</strong> building tools that power seamless post-purchase customer
+        experiences.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me playing Apex legends, coding cool shit, or exploring our beautiful{' '}
-        <strong className="text-stone-100">World</strong>.
+        I love shipping meaningful software, working on side projects like games and analytics platforms, and exploring
+        how code, design, and human behavior intersect. When I’m not coding, you’ll find me biking, parenting, or
+        planning my next adventure.
       </p>
     </>
   ),
   actions: [
     {
       href: '/assets/resume.pdf',
-      text: 'Resume',
+      text: 'Download Resume',
       primary: true,
       Icon: DownloadIcon,
     },
     {
       href: `#${SectionId.Contact}`,
-      text: 'Contact',
+      text: 'Get in Touch',
       primary: false,
     },
   ],
@@ -97,11 +100,11 @@ export const aboutData: About = {
   profileImageSrc: profilepic,
   aboutItems: [
     {label: 'Location', text: 'Munich, Germany', Icon: MapIcon},
-    {label: 'Age', text: '31', Icon: CalendarIcon},
+    {label: 'Age', text: '33', Icon: CalendarIcon},
     {label: 'Nationality', text: 'Turkish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Computer games, Football, Travel', Icon: SparklesIcon},
+    {label: 'Interests', text: 'Game development, History, Cycling, Fatherhood', Icon: SparklesIcon},
     {label: 'Study', text: 'Yıldız Technical University', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Parcellab', Icon: OfficeBuildingIcon},
+    {label: 'Employment', text: 'ParcelLab', Icon: OfficeBuildingIcon},
   ],
 };
 
@@ -112,69 +115,41 @@ export const skills: SkillGroup[] = [
   {
     name: 'Spoken languages',
     skills: [
-      {
-        name: 'Turkish',
-        level: 10,
-      },
-      {
-        name: 'English',
-        level: 8,
-      },
-      {
-        name: 'German',
-        level: 6,
-      },
+      {name: 'Turkish', level: 10},
+      {name: 'English', level: 9},
+      {name: 'German', level: 6},
     ],
   },
   {
     name: 'Frontend development',
     skills: [
-      {
-        name: 'React',
-        level: 9,
-      },
-      {
-        name: 'Typescript',
-        level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 7,
-      },
+      {name: 'React', level: 9},
+      {name: 'TypeScript', level: 8},
+      {name: 'Tailwind CSS', level: 7},
+      {name: 'GraphQL', level: 7},
     ],
   },
   {
     name: 'Backend development',
     skills: [
-      {
-        name: 'Node.js',
-        level: 8,
-      },
-      {
-        name: 'Rust',
-        level: 7,
-      },
-      {
-        name: 'Golang',
-        level: 6,
-      },
+      {name: 'Node.js', level: 9},
+      {name: 'Rust', level: 7},
+      {name: 'Golang', level: 6},
+    ],
+  },
+  {
+    name: 'Game Development',
+    skills: [
+      {name: 'Godot', level: 6},
+      {name: 'GDScript', level: 6},
+      {name: 'Procedural Design', level: 6},
     ],
   },
   {
     name: 'Mobile development',
     skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 5,
-      },
-      {
-        name: 'NativeScript',
-        level: 5,
-      },
+      {name: 'React Native', level: 8},
+      {name: 'Flutter', level: 5},
     ],
   },
 ];
@@ -183,38 +158,14 @@ export const skills: SkillGroup[] = [
  * Projects section
  */
 export const projects: Project[] = [
-  {
-    name: 'Piarka',
-    description: 'A project which is dedicated to help solo traveler in strange cities',
-  },
-  {
-    name: 'Sliden & Learn',
-    description: 'A mini game for kids to learn animals in different languages',
-  },
-  {
-    name: '81 Guides',
-    description: 'A project which provides 81 Guides in 81 cities of Turkey',
-  },
-  {
-    name: 'An unusual refrugee',
-    description: 'A Survival game in a foreign planet',
-  },
-  {
-    name: 'Procedural dungeon',
-    description: 'Procedurally generated dungeons with a Souls-like turn based rpg.',
-  },
-  {
-    name: 'dogabudak.com',
-    description: 'Basically this website',
-  },
-  {
-    name: 'piarkasoftware.com',
-    description: 'A startup website',
-  },
-  {
-    name: 'yesildoga',
-    description: 'A project focuses on earth, our earth',
-  },
+  {name: 'Piarka', description: 'A travel assistant designed for curious solo explorers.'},
+  {name: 'Sliden & Learn', description: 'A playful multilingual animal quiz for toddlers.'},
+  {name: '81 Guides', description: 'Tourist info app for all 81 cities in Turkey.'},
+  {name: 'An Unusual Refugee', description: 'A narrative survival game on an alien planet.'},
+  {name: 'Into the Light', description: 'A roguelike RPG with procedural dungeons and turn-based combat.'},
+  {name: 'dogabudak.com', description: 'My personal portfolio and playground.'},
+  {name: 'Piarka Software', description: 'A small studio for experimental tech and games.'},
+  {name: 'Yeşil Doğa', description: 'A green initiative focused on ecological awareness.'},
 ];
 
 /**
@@ -271,22 +222,16 @@ export const experience: TimelineItem[] = [
   {
     date: 'July 2022 - Present',
     location: 'ParcelLab',
-    title: 'Backend Engineer',
-    content: <p>Backend engineer for a customer OXM product, developed with Amazon SQS, nodejs and mongoDB.</p>,
-  },
-  {
-    date: 'Jan. 2022 - July 2022',
-    location: 'Timify',
-    title: 'Backend Engineer',
+    title: 'Senior Software Engineer',
     content: (
       <p>
-        Backend engineer for an online scheduling and resource management software for small, medium businesses,
-        developed with nodejs and graphql and aws lambda.
+        Leading backend initiatives for post-purchase experiences using Node.js, MongoDB, and AWS (SQS, Lambda). Also
+        contribute to architectural planning, mentoring, and technical documentation.
       </p>
     ),
   },
   {
-    date: 'July. 2021 - Dec 2021',
+    date: 'July. 2021 - July 2022',
     location: 'Kirinus Health',
     title: 'Fullstack Developer',
     content: <p>Fullstack developer for an online therapy platform, developed with mongodb, golang and flutter.</p>,
@@ -321,7 +266,7 @@ export const experience: TimelineItem[] = [
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Reach out to me if you have any further questions!',
+  description: 'Reach out for collaborations, game dev talk, or tech ideas. No recruiters, please 🙃',
   items: [
     {
       type: ContactType.Email,
