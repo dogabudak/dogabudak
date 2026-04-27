@@ -263,30 +263,34 @@ export const experience: TimelineItem[] = [
 /**
  * Contact section
  */
+const CONTACT_EMAIL = 'dogabudak@gmail.com';
+const GITHUB_URL = 'https://github.com/dogabudak';
+const INSTAGRAM_URL = 'https://www.instagram.com/budakdoga/';
+const MUNICH_MAP_URL = 'https://www.google.com/maps?q=81549,Munich,Germany';
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Reach out for collaborations, game dev talk, or tech ideas. No recruiters, please 🙃',
+  description: 'Reach out for collaborations, game dev talk, or tech ideas.',
   items: [
     {
       type: ContactType.Email,
-      text: 'dogabudak@gmail.com',
-      href: 'mailto:dogabudak@gmail.com',
-    },
-    {
-      type: ContactType.Location,
-      text: 'Munich, Germany',
-      href: 'https://www.google.ca/maps/place/Sachranger+Str.+14,+81549+M%C3%BCnchen/@48.1046092,11.5904181,17.31z',
-    },
-    {
-      type: ContactType.Instagram,
-      text: '@budakdoga',
-      href: 'https://www.instagram.com/budakdoga/',
+      text: CONTACT_EMAIL,
+      href: `mailto:${CONTACT_EMAIL}`,
     },
     {
       type: ContactType.Github,
       text: 'dogabudak',
-      href: 'https://github.com/dogabudak',
+      href: GITHUB_URL,
+    },
+    {
+      type: ContactType.Instagram,
+      text: '@budakdoga',
+      href: INSTAGRAM_URL,
+    },
+    {
+      type: ContactType.Location,
+      text: '81549, Munich, Germany',
+      href: MUNICH_MAP_URL,
     },
   ],
 };
@@ -295,9 +299,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/dogabudak'},
+  {label: 'Github', Icon: GithubIcon, href: GITHUB_URL},
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/doga-budak-40635b95'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/budakdoga/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: INSTAGRAM_URL},
   {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/dogabudak'},
-  {label: 'Facebook', Icon: FacebookIcon, href: 'https://www.facebook.com/doga.budak.3"'},
+  {label: 'Facebook', Icon: FacebookIcon, href: 'https://www.facebook.com/doga.budak.3'},
 ];
