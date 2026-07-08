@@ -1,6 +1,5 @@
 import {
   AcademicCapIcon,
-  CalendarIcon,
   DownloadIcon,
   FlagIcon,
   MapIcon,
@@ -14,11 +13,6 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.png';
-import porfolioImage4 from '../images/portfolio/portfolio-4.png';
-import porfolioImage5 from '../images/portfolio/portfolio-5.png';
-import porfolioImage6 from '../images/portfolio/portfolio-6.png';
-import porfolioImage7 from '../images/portfolio/portfolio-7.png';
 import profilepic from '../images/profilepic.jpg';
 import {
   About,
@@ -26,7 +20,6 @@ import {
   ContactType,
   Hero,
   HomepageMeta,
-  PortfolioItem,
   Project,
   SkillGroup,
   Social,
@@ -49,7 +42,6 @@ export const SectionId = {
   Hero: 'hero',
   About: 'about',
   Contact: 'contact',
-  Portfolio: 'portfolio',
   Resume: 'resume',
   Projects: 'projects',
   Stats: 'stats',
@@ -98,12 +90,18 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
+  description: (
+    <p className="prose prose-sm text-gray-300 sm:prose-base">
+      I'm a software engineer with over 10 years of experience building scalable web applications and backend systems.
+      I'm passionate about clean code, thoughtful architecture, and creating tools that make a real difference.
+      Outside of work, I enjoy game development, exploring new technologies, and spending time with my family.
+    </p>
+  ),
   aboutItems: [
     {label: 'Location', text: 'Munich, Germany', Icon: MapIcon},
-    {label: 'Age', text: '33', Icon: CalendarIcon},
     {label: 'Nationality', text: 'Turkish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Game development, History, Cycling, Fatherhood', Icon: SparklesIcon},
-    {label: 'Study', text: 'Yıldız Technical University', Icon: AcademicCapIcon},
+    {label: 'Interests', text: 'Game Development, History, Cycling', Icon: SparklesIcon},
+    {label: 'Education', text: 'Yıldız Technical University', Icon: AcademicCapIcon},
     {label: 'Employment', text: 'ParcelLab', Icon: OfficeBuildingIcon},
   ],
 };
@@ -169,40 +167,8 @@ export const projects: Project[] = [
 ];
 
 /**
- * Portfolio section
+ * Resume section
  */
-export const portfolioItems: PortfolioItem[] = [
-  {
-    title: 'Nuremberg',
-    url: 'https://www.instagram.com/p/CeLb_0FKChLJmH0sJ9YyMOs7BmR8IP-g7PRXFw0/',
-    image: porfolioImage3,
-  },
-  {
-    title: 'Cuba',
-    url: 'https://www.instagram.com/p/B4JDxdVKjaiggpDEZNMAD0lJM9qNJdzVTRt3P40/',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Seychelles',
-    url: 'https://www.instagram.com/p/Cg7yAHDq2j1trlYKMYOwFejHoIgkxN_qKATwIM0/',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Maspolamas',
-    url: 'https://www.instagram.com/p/BzEKbRAIy4xz4UBv4JEnmkbPSeZTikyEKe6FHo0/',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Oktoberfest',
-    url: 'https://www.instagram.com/p/BqNtIV7FeWuPZd4BFAxMprdsr6GkCLF8OGNphE0/',
-    image: porfolioImage7,
-  },
-];
-
-/**
- * Resume section --
- */
-// TODO Content is tirt
 export const education: TimelineItem[] = [
   {
     date: 'Mar. 2017 - Jan.2018',
